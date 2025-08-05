@@ -71,6 +71,7 @@ test('Anchor Faq has color #490049', async ({ page }) => {
 });
 
 // This function comes from https://playwrightsolutions.com/what-the-hex-or-how-i-check-colors-with-playwright/
+// (c) 2023 Sergei Gapanovich
 export function convertHexToRGB(hex) {
   // Remove the '#' if it's included in the input
   hex = hex.replace(/^#/, '');
@@ -89,6 +90,7 @@ export function convertHexToRGB(hex) {
 }
 
 // This function comes from https://playwrightsolutions.com/what-the-hex-or-how-i-check-colors-with-playwright/
+// (c) 2023 Sergei Gapanovich
 export async function checkColor(element, cssProperty, rgbColors) {
   await expect(element).toHaveCSS(cssProperty, `rgb(${rgbColors.red}, ${rgbColors.green}, ${rgbColors.blue})`);
 }
