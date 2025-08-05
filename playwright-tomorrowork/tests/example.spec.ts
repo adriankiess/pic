@@ -70,16 +70,6 @@ test('Anchor Faq has color #490049', async ({ page }) => {
 	await checkColor(page.locator("body").first(), "background-color", rgbColors);
 });
 
-//test('get started link', async ({ page }) => {
-//  await page.goto('https://playwright.dev/');
-//
-//  // Click the get started link.
-//  await page.getByRole('link', { name: 'Get started' }).click();
-//
-//  // Expects page to have a heading with the name of Installation.
-//  await expect(page.getByRole('heading', { name: 'Installation' })).toBeVisible();
-//});
-
 // This function comes from https://playwrightsolutions.com/what-the-hex-or-how-i-check-colors-with-playwright/
 export function convertHexToRGB(hex) {
   // Remove the '#' if it's included in the input
