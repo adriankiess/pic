@@ -11,7 +11,7 @@ import { test, expect } from '@playwright/test';
 
 test.beforeAll( async({browser}) => {
 	console.log('(c) 2025 by Adrian Kiess');
-	console.log('We now do background-color checks to https://tomorrowork.de/!');
+	console.log('We now do CSS background-color checks to https://tomorrowork.de/!');
 	console.log();
 });
 
@@ -23,8 +23,7 @@ test('Anchor Start has color #004900', async ({ page }) => {
 
 	await expect(page.getByText('Sinnhafte Jobs für die junge Generation')).toBeVisible();
 
-	await checkColor( page.locator("body").first(), "background-color", rgbColors);
-
+	await checkColor(page.locator("body").first(), "background-color", rgbColors);
 });
 
 test('Anchor Ziel has color #490049', async ({ page }) => {
@@ -35,8 +34,7 @@ test('Anchor Ziel has color #490049', async ({ page }) => {
 
 	await expect(page.getByText('TOMORROWORK für...')).toBeVisible();
 
-	await checkColor( page.locator("body").first(), "background-color", rgbColors);
-
+	await checkColor(page.locator("body").first(), "background-color", rgbColors);
 });
 
 test('Anchor Region has color #004949', async ({ page }) => {
@@ -47,8 +45,7 @@ test('Anchor Region has color #004949', async ({ page }) => {
 
 	await expect(page.getByText('TOMORROWORK konzentriert sich auf die Region Mitteldeutschland.')).toBeVisible();
 
-	await checkColor( page.locator("body").first(), "background-color", rgbColors);
-
+	await checkColor(page.locator("body").first(), "background-color", rgbColors);
 });
 
 test('Anchor Mitmachen has color #004900', async ({ page }) => {
@@ -59,8 +56,7 @@ test('Anchor Mitmachen has color #004900', async ({ page }) => {
 
 	await expect(page.getByText('Unsere Plattform interessiert dich oder du zählst dich zur Zielgruppe?')).toBeVisible();
 
-	await checkColor( page.locator("body").first(), "background-color", rgbColors);
-
+	await checkColor(page.locator("body").first(), "background-color", rgbColors);
 });
 
 test('Anchor Faq has color #490049', async ({ page }) => {
@@ -71,8 +67,7 @@ test('Anchor Faq has color #490049', async ({ page }) => {
 
 	await expect(page.getByText('Du hast weitere Fragen zu unserem Projekt? Melde dich gerne bei uns!')).toBeVisible();
 
-	await checkColor( page.locator("body").first(), "background-color", rgbColors);
-
+	await checkColor(page.locator("body").first(), "background-color", rgbColors);
 });
 
 //test('get started link', async ({ page }) => {
