@@ -15,7 +15,7 @@ test.beforeAll( async({browser}) => {
 	console.log();
 });
 
-test('Anchor Start has color #004900', async ({ page }) => {
+test('Anchor Start has CSS background-color #004900', async ({ page }) => {
   let hexColor = "#004900";
 	let rgbColors = convertHexToRGB(hexColor);
 
@@ -25,7 +25,7 @@ test('Anchor Start has color #004900', async ({ page }) => {
 	await checkColor(page.locator("body").first(), "background-color", rgbColors);
 });
 
-test('Anchor Ziel has color #490049', async ({ page }) => {
+test('Anchor Ziel has CSS background-color #490049', async ({ page }) => {
   let hexColor = "#490049";
 	let rgbColors = convertHexToRGB(hexColor);
 
@@ -36,7 +36,7 @@ test('Anchor Ziel has color #490049', async ({ page }) => {
 	await checkColor(page.locator("body").first(), "background-color", rgbColors);
 });
 
-test('Anchor Region has color #004949', async ({ page }) => {
+test('Anchor Region has CSS background-color #004949', async ({ page }) => {
   let hexColor = "#004949";
 	let rgbColors = convertHexToRGB(hexColor);
 
@@ -47,7 +47,7 @@ test('Anchor Region has color #004949', async ({ page }) => {
 	await checkColor(page.locator("body").first(), "background-color", rgbColors);
 });
 
-test('Anchor Mitmachen has color #004900', async ({ page }) => {
+test('Anchor Mitmachen has CSS background-color #004900', async ({ page }) => {
   let hexColor = "#004900";
 	let rgbColors = convertHexToRGB(hexColor);
 
@@ -58,7 +58,7 @@ test('Anchor Mitmachen has color #004900', async ({ page }) => {
 	await checkColor(page.locator("body").first(), "background-color", rgbColors);
 });
 
-test('Anchor Faq has color #490049', async ({ page }) => {
+test('Anchor Faq has CSS background-color #490049', async ({ page }) => {
   let hexColor = "#490049";
 	let rgbColors = convertHexToRGB(hexColor);
 
