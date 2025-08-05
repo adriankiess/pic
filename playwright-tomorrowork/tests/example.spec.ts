@@ -1,0 +1,111 @@
+//
+// (c) 2025 by Adrian Kiess
+//
+
+// USAGE:
+// % npx playwright test --project firefox
+// % npx playwright show-report
+// Browse to: http://localhost:9323
+
+import { test, expect } from '@playwright/test';
+
+test.beforeAll( async({browser}) => {
+	console.log('(c) 2025 by Adrian Kiess');
+	console.log('We now do background-color checks to https://tomorrowork.de/!');
+	console.log();
+});
+
+test('Anchor Start has color #004900', async ({ page }) => {
+  let hexColor = "#004900";
+	let rgbColors = convertHexToRGB(hexColor);
+
+  await page.goto('https://tomorrowork.de/');
+
+	await expect(page.getByText('Sinnhafte Jobs für die junge Generation')).toBeVisible();
+
+	await checkColor( page.locator("body").first(), "background-color", rgbColors);
+
+});
+
+test('Anchor Ziel has color #490049', async ({ page }) => {
+  let hexColor = "#490049";
+	let rgbColors = convertHexToRGB(hexColor);
+
+  await page.goto('https://tomorrowork.de/#ziel');
+
+	await expect(page.getByText('TOMORROWORK für...')).toBeVisible();
+
+	await checkColor( page.locator("body").first(), "background-color", rgbColors);
+
+});
+
+test('Anchor Region has color #004949', async ({ page }) => {
+  let hexColor = "#004949";
+	let rgbColors = convertHexToRGB(hexColor);
+
+  await page.goto('https://tomorrowork.de/#region');
+
+	await expect(page.getByText('TOMORROWORK konzentriert sich auf die Region Mitteldeutschland.')).toBeVisible();
+
+	await checkColor( page.locator("body").first(), "background-color", rgbColors);
+
+});
+
+test('Anchor Mitmachen has color #004900', async ({ page }) => {
+  let hexColor = "#004900";
+	let rgbColors = convertHexToRGB(hexColor);
+
+  await page.goto('https://tomorrowork.de/#mitmachen');
+
+	await expect(page.getByText('Unsere Plattform interessiert dich oder du zählst dich zur Zielgruppe?')).toBeVisible();
+
+	await checkColor( page.locator("body").first(), "background-color", rgbColors);
+
+});
+
+test('Anchor Faq has color #490049', async ({ page }) => {
+  let hexColor = "#490049";
+	let rgbColors = convertHexToRGB(hexColor);
+
+  await page.goto('https://tomorrowork.de/#faq');
+
+	await expect(page.getByText('Du hast weitere Fragen zu unserem Projekt? Melde dich gerne bei uns!')).toBeVisible();
+
+	await checkColor( page.locator("body").first(), "background-color", rgbColors);
+
+});
+
+//test('get started link', async ({ page }) => {
+//  await page.goto('https://playwright.dev/');
+//
+//  // Click the get started link.
+//  await page.getByRole('link', { name: 'Get started' }).click();
+//
+//  // Expects page to have a heading with the name of Installation.
+//  await expect(page.getByRole('heading', { name: 'Installation' })).toBeVisible();
+//});
+
+// This function comes from https://playwrightsolutions.com/what-the-hex-or-how-i-check-colors-with-playwright/
+export function convertHexToRGB(hex) {
+  // Remove the '#' if it's included in the input
+  hex = hex.replace(/^#/, '');
+
+  // Parse the hex values into separate R, G, and B values
+  const red = parseInt(hex.substring(0, 2), 16);
+  const green = parseInt(hex.substring(2, 4), 16);
+  const blue = parseInt(hex.substring(4, 6), 16);
+
+  // Return the RGB values in an object
+  return {
+    red: red,
+    green: green,
+    blue: blue,
+  };
+}
+
+// This function comes from https://playwrightsolutions.com/what-the-hex-or-how-i-check-colors-with-playwright/
+export async function checkColor(element, cssProperty, rgbColors) {
+  await expect(element).toHaveCSS(cssProperty, `rgb(${rgbColors.red}, ${rgbColors.green}, ${rgbColors.blue})`);
+}
+
+// EOF
