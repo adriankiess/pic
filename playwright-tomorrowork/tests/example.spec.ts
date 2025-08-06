@@ -2,6 +2,9 @@
 // (c) 2025 by Adrian Kiess
 //
 
+//  Microsoft Playwright Test example for https://tomorrowork.de from Pi Innovation Culture GmbH.
+//  Use-Case: CSS property background-color validation checks to CSS class body of https://tomorrowork.de/!
+
 // USAGE:
 // % mkdir pic; cd pic
 // % git clone git@github.com:adriankiess/pic.git
@@ -15,7 +18,7 @@ import { test, expect } from '@playwright/test';
 
 test.beforeAll( async({browser}) => {
 	console.log('(c) 2025 by Adrian Kiess');
-	console.log('We now do CSS background-color checks to https://tomorrowork.de/!');
+	console.log('We now do CSS property background-color validation checks to CSS class body of https://tomorrowork.de/!');
 	console.log();
 });
 
