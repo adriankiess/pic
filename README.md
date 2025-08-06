@@ -6,8 +6,10 @@
 ~~~
 
 ~~~
-// Microsoft Playwright Test example for https://tomorrowork.de from Pi Innovation Culture GmbH.
-// Use-Case: CSS property background-color validation checks to CSS class body of https://tomorrowork.de/!
+// Microsoft Playwright Test example for https://tomorrowork.de from Pi
+// Innovation Culture GmbH.
+// Use-Case: CSS property background-color validation checks to CSS class
+// body of https://tomorrowork.de/!
 ~~~
 
 ~~~
