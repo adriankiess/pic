@@ -29,6 +29,7 @@ test('Anchor Start has CSS background-color #004900', async ({ page }) => {
 	let rgbColors = convertHexToRGB(hexColor);
 
   await page.goto('https://tomorrowork.de/');
+	
 	await expect(page.locator("id=start")).toContainText('Sinnhafte Jobs');
 
 	await checkColor(page.locator("body").first(), "background-color", rgbColors);
