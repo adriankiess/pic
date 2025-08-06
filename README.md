@@ -1,10 +1,13 @@
 # pic
-Microsoft Playwright example Test for https://tomorrowork.de from Pi Innovation Culture GmbH.
-
 ~~~
 //
 // (c) 2025 by Adrian Kiess
 //
+~~~
+
+~~~
+// Microsoft Playwright Test example for https://tomorrowork.de from Pi Innovation Culture GmbH.
+// Use-Case: CSS property background-color validation checks to CSS class body of https://tomorrowork.de/!
 ~~~
 
 ~~~
