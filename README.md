@@ -1,8 +1,7 @@
 # pic
-// 
-//   (c) 2025 by Adrian Kiess
-//   [Link to LICENSE.txt](LICENSE.txt)
-//
+ 
+   (c) 2025 by Adrian Kiess
+   [Link to LICENSE.txt](LICENSE.txt)
 
 ~~~
 // Microsoft Playwright Test example for https://tomorrowork.de from Pi
