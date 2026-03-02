@@ -1,7 +1,7 @@
 # pic
 
->   (c) 2025 by Adrian Kiess
 >
+>   (c) 2025 by Adrian Kiess <br />
 >   License, see LICENSE.txt.
 >
 
