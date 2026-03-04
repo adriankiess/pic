@@ -1,3 +1,5 @@
+BSD 2-Clause License
+
 # pic : LICENSE.txt
 
 Copyright (c) 2025
